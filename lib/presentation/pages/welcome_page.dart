@@ -1,3 +1,4 @@
+import 'package:class_flutter/presentation/pages/login_page.dart';
 import 'package:class_flutter/presentation/styles/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,6 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   double boxSize = 150;
-
 
   @override
   Widget build(BuildContext context) {
@@ -65,10 +65,11 @@ class _WelcomePageState extends State<WelcomePage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      print("adsasdasdasdasd");
-                      setState(() {
-                        boxSize = boxSize + 100;
-                      });
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ));
                     },
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 800),

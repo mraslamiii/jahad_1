@@ -1,9 +1,13 @@
+import 'package:class_flutter/presentation/pages/survay_pages/base_page.dart';
 import 'package:class_flutter/presentation/pages/welcome_page.dart';
 import 'package:class_flutter/presentation/styles/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+
+  Future.delayed(Duration(seconds: 5)).then((value) => null );
+
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
        // darkTheme: darkThemeData(),
        debugShowCheckedModeBanner: false,
 
-       home: WelcomePage(),
+       home: SurvayBasePage(),
     );
   }
 }
