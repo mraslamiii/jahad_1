@@ -63,7 +63,7 @@ class _InterestPageState extends State<InterestPage> {
           border: Border.all(color: Colors.red),
           color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
               .withOpacity(1.0),
-          borderRadius: BorderRadius.circular(24)),
+          borderRadius:   BorderRadius.circular(24)),
       child: Text(title,
           style: Theme.of(context)
               .textTheme
