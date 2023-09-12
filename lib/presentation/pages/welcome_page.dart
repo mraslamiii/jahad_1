@@ -1,6 +1,7 @@
 import 'package:class_flutter/presentation/pages/login_page.dart';
 import 'package:class_flutter/presentation/styles/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -64,7 +65,15 @@ class _WelcomePageState extends State<WelcomePage> {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: () {
+                    onTap: () async {
+                      final SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+
+                      if (prefs != null) {
+                        prefs.setBool('isFirstLaunch', false);
+
+                      }
+
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
