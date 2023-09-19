@@ -1,6 +1,8 @@
+import 'package:class_flutter/presentation/pages/survay_pages/select_hours_page.dart';
 import 'package:class_flutter/presentation/styles/sizes.dart';
 import 'package:flutter/material.dart';
 
+import 'recommend_page.dart';
 import 'select_interest_page.dart';
 
 class SurvayBasePage extends StatefulWidget {
@@ -58,16 +60,8 @@ class _SurvayBasePageState extends State<SurvayBasePage> {
           controller: pageController,
           children: [
             InterestPage(),
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              color: Colors.yellow,
-            ),
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              color: Colors.black,
-            ),
+            SelectHoursPage(),
+            RecommndPage(),
             Container(
               height: double.infinity,
               width: double.infinity,

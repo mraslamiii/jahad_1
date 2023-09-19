@@ -5,6 +5,8 @@ import 'package:class_flutter/presentation/styles/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'presentation/pages/home_page.dart';
+
 void main() {
   runApp(const MyApp());
 
@@ -38,6 +40,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: themeData(),
+      locale: Locale('fa'),
       // darkTheme: darkThemeData(),
       debugShowCheckedModeBanner: false,
 
@@ -52,7 +55,7 @@ class _MyAppState extends State<MyApp> {
             if (__isFirstLaunch) {
               return WelcomePage();
             } else {
-              return LoginPage();
+              return HomePage();
             }
           }
           return Center();
