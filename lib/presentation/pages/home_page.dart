@@ -8,7 +8,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -22,30 +21,6 @@ class HomePage extends StatelessWidget {
                     storyWidget(fakeStoryList[index]),
               ),
             ),
-            SizedBox(
-              height: 1000,
-              child: GridView.custom(
-                gridDelegate: SliverQuiltedGridDelegate(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 4,
-                  crossAxisSpacing: 4,
-                  repeatPattern: QuiltedGridRepeatPattern.inverted,
-                  pattern: [
-                    QuiltedGridTile(2, 2),
-                    QuiltedGridTile(1, 1),
-                    QuiltedGridTile(1, 1),
-                    QuiltedGridTile(1, 2),
-                    QuiltedGridTile(1, 2),
-                    QuiltedGridTile(1, 1),
-                    QuiltedGridTile(1, 1),
-                    QuiltedGridTile(1, 2),
-                  ],
-                ),
-                childrenDelegate: SliverChildBuilderDelegate(
-                  (context, index) => Tile(index: index),
-                ),
-              ),
-            )
           ],
         ),
       ),

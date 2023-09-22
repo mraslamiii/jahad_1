@@ -5,6 +5,14 @@ ThemeData themeData() {
   AppColors colors = AppColors();
 
   return ThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: Colors.black,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      type: BottomNavigationBarType.fixed,
+
+      unselectedItemColor: Colors.grey,
+    ),
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           iconTheme: IconThemeData(color: Colors.black),

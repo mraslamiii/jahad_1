@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'presentation/pages/home_page.dart';
+import 'presentation/pages/main_page.dart';
+import 'presentation/pages/radio_javan.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +57,7 @@ class _MyAppState extends State<MyApp> {
             if (__isFirstLaunch) {
               return WelcomePage();
             } else {
-              return HomePage();
+              return RadioJavanPage();
             }
           }
           return Center();
