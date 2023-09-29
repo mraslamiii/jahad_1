@@ -3,8 +3,10 @@ import 'package:class_flutter/presentation/pages/survay_pages/base_page.dart';
 import 'package:class_flutter/presentation/pages/welcome_page.dart';
 import 'package:class_flutter/presentation/styles/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'presentation/pages/counter_page/counter_page.dart';
 import 'presentation/pages/home_page.dart';
 import 'presentation/pages/main_page.dart';
 import 'presentation/pages/radio_javan.dart';
@@ -40,7 +42,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: themeData(),
       locale: Locale('fa'),
       // darkTheme: darkThemeData(),
@@ -55,9 +57,9 @@ class _MyAppState extends State<MyApp> {
             bool __isFirstLaunch =
                 snapshot.data?.getBool('isFirstLaunch') ?? true;
             if (__isFirstLaunch) {
-              return WelcomePage();
+              return CounterPage();
             } else {
-              return RadioJavanPage();
+              return CounterPage();
             }
           }
           return Center();
