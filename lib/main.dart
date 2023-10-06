@@ -1,3 +1,4 @@
+import 'package:class_flutter/data/repo/product_repo.dart';
 import 'package:class_flutter/presentation/pages/login_page.dart';
 import 'package:class_flutter/presentation/pages/survay_pages/base_page.dart';
 import 'package:class_flutter/presentation/pages/welcome_page.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late SharedPreferences prefs;
+
   // bool _isFirstLaunch = true;
 
   @override
@@ -35,6 +37,8 @@ class _MyAppState extends State<MyApp> {
     //   _isFirstLaunch = prefs.getBool('isFirstLaunch') ?? true;
     // });
   }
+
+
 
   // Future initPref() async {
   //   prefs = await SharedPreferences.getInstance();
@@ -62,7 +66,6 @@ class _MyAppState extends State<MyApp> {
             }
           }
           return Center();
-
         },
       ),
     );

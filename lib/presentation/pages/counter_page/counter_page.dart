@@ -8,15 +8,26 @@ class CounterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var c = Get.put(CounterPageController());
-
-    return Column(
-      children: [
-        Center(
-          child: Obx(() => Text("${c.count}")),
-        ),
-
-        FilledButton(onPressed: () => c.increment(), child: Text('add'))
-      ],
-    );
+//todo error run getx builder
+    return Obx(() => Column(
+          children: [
+            Text(c.productModel?.value?.title ?? "",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(color: Colors.white)),
+            Text(c.productModel?.value?.price.toString() ?? "",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(color: Colors.white)),
+            Text(c.productModel?.value?.description ?? "",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(color: Colors.white)),
+            Image.network(c.productModel?.value?.images?.first ?? '')
+          ],
+        ));
   }
 }

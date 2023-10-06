@@ -41,6 +41,8 @@ dependencies:
   flutter_staggered_grid_view: ^0.7.0
   retrofit:
   logger:
+  json_annotation: ^4.8.1
+
   get:
 
 
