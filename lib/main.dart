@@ -44,7 +44,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: themeData(),
-      locale: Locale('fa'),
       // darkTheme: darkThemeData(),
       debugShowCheckedModeBanner: false,
 
