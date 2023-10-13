@@ -60,9 +60,9 @@ class _MyAppState extends State<MyApp> {
             bool __isFirstLaunch =
                 snapshot.data?.getBool('isFirstLaunch') ?? true;
             if (__isFirstLaunch) {
-              return CounterPage();
+              return ProductPage();
             } else {
-              return CounterPage();
+              return ProductPage();
             }
           }
           return Center();
